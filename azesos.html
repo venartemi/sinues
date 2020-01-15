@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+<style>
+  #map { 
+    height: 580px;
+    box-shadow: 5px 5px 5px #888;
+ }
+</style>
+<script src="main.js"></script>
+</head>
+<body>
+
+<div class="header col-12">
+    <p><img class = "logo"src="media/logo.png" /></p>
+</div>
+
+
+<div class="row">
+  <div class="boton-abrir">
+    <button class="boton-abrir" onclick="myFunction()">Menú</button>
+  </div>
+  <div class="col-3 col-s-3 menu" id="menu">
+    <ul>
+        <li><a href="index.html">Inizio</a></li>
+        <li><a href="istoria.html" >Istoria</a></li>
+        <li><a href="palotiau.html">Palotiau</a></li>
+        <li><a href="autividatz.html">Autividatz</a></li>
+        <li style="background-color:rgb(48, 48, 48);"><a href="azesos.html">Azesos</a></li>
+        <li><a href="viyer.html">Qué viyer</a></li>
+        <li><a href="minchar.html">On minchar</a></li>
+        <li><a href="dormir.html">On dormir</a></li>
+        <li><a href="espazio-vezino.html">Espazio vezino</a></li>
+    </ul>
+  </div>
+<div class="main">
+  <div class="col-9 col-s-9">
+    <h1>Como hi plegar</h1>
+
+    <p>Bi ha muitas formas de plegar, la mas facil ye dende Chaca por a 
+      carretera que fa as indicazions ta plegar a Aisa. Dimpues de cruzar o lugar d'as
+    Tiesas Baixas, unos pocos kilometros entaban bi ha desvio que nos levara,
+  tras 2 kilometros cara arriba a Sinues.</p>
+    <div class = "col-9" id="map">
+
+    </div>
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+    <p>Isto ye una prueba</p>
+    <p>Manca muito por fer</p>
+    <p>2020</p>
+</div>
+
+<script>
+  var map = L.map('map').
+     setView([42.653744, -0.648862],
+     15);
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+  maxZoom: 18
+  }).addTo(map);
+  L.control.scale().addTo(map);
+  L.marker([42.653744, -0.648862],).addTo(map);
+</script>
+
+</body>
+</html>

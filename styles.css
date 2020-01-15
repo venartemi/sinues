@@ -3,7 +3,7 @@
   }
 
 
-  
+
   .row::after {
     content: "";
     clear: both;
@@ -26,12 +26,15 @@
     background-color: white;
     color: #ffffff;
     padding: 15px;
+    align-content: center;
   }
-  .logo{
+  img.logo{
     height: 20vh;
     width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
   
-  }
  a {
     display: block;
     color: #000;
@@ -40,9 +43,9 @@
     text-align: center;
   }
 
-   /*.menu{
+  .menu{
       display: none;
-  }*/
+  }
   
   .menu ul {
     list-style-type: none;
@@ -57,10 +60,12 @@
     background-color: grey;
     color: #ffffff;
   }
+
   
   .menu li:hover {
     background-color: darkslategray;
   }
+
   
   .footer {
     background-color: darkslategray;
@@ -73,6 +78,25 @@
     width: 100%;
     height: auto;
   }
+  /*boton abrir*/
+
+
+  .boton-abrir {
+  background-color: gray; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+}
+
+
+  /*widget del tiempo*/
+  .tiempo-desktop{display:none}
+  .tiempo-tablet{display:none}
   
   /* For mobile phones: */
   [class*="col-"] {
@@ -93,7 +117,11 @@
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-    .menu{display:block}
+    .menu{display:block;}
+    /*Solo para el widget del tiempo*/
+    .tiempo-desktop{display:none;}
+    .tiempo-tablet{display:block;}
+    .tiempo-movil{display:none;}
     
   }
   @media only screen and (min-width: 768px) {
@@ -110,7 +138,14 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-    .menu{display:block}
-    .open_button{display:none}
+    .menu{display:block;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;}
+    .boton-abrir{display:none}
+    /*Solo para el widget del tiempo*/
+    .tiempo-desktop{display:block;}
+    .tiempo-tablet{display:none;}
+    .tiempo-movil{display:none;}
 
   }
